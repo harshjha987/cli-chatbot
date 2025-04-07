@@ -42,7 +42,7 @@ export async function chatWithBot(userInput : string , prevMessages : Message[])
         const chat = model.startChat({
             generationConfig,
             safetySettings : SAFETY_SETTINGS,
-            history : []
+            history ,
         })
 
         const result = await chat.sendMessage(userInput)
